@@ -1,0 +1,203 @@
+html,
+body {
+  box-sizing: border-box;
+  background-color: darkgoldenrod;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-header {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+}
+.video-header video {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-and-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 63vw;
+  height: 55vh;
+}
+
+h1 {
+  font-family: 'Fascinate';
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+button {
+  font-family: 'Roboto Slab';
+  cursor: pointer;
+  border: 1px dotted #333;
+  border-radius: 20px;
+  font-size: 0.7rem;
+}
+
+button#submit {
+  font-size: 0.5rem;
+  padding: 3px;
+}
+
+button:hover {
+  background-color: cornsilk;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input {
+  font-family: 'Roboto Slab';
+  border: 1px dotted #333;
+  border-radius: 20px;
+  width: 200px;
+  height: 20px;
+  font-size: 0.5rem;
+  padding-left: 10px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  background-color: cornsilk;
+}
+
+#form {
+  text-align: center;
+}
+
+/* --------------------------------------- */
+
+.content {
+  font-family: 'Roboto Slab';
+  position: relative;
+  min-height: 30vh;
+  min-width: 100vw;
+  background-color: #333;
+  color: darkgoldenrod;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#results {
+  width: 100%;
+  height: 100%;
+}
+
+ul.songs-and-artists-list {
+  list-style-type: none;
+}
+
+ul.songs-and-artists-list li {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-right: 40px;
+}
+
+ul.songs-and-artists-list li:nth-child(odd) {
+  background-color: #373737;
+}
+
+button.get-lyrics-btn {
+  font-size: 0.4rem;
+  width: 50px;
+  margin: 10px;
+}
+
+h5 {
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.65rem;
+  line-height: 1.2rem;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  color: #333;
+}
+/* ------------------------------------- */
+/* media queries */
+
+@media (max-width: 500px) {
+  .video-header {
+    position: relative;
+    width: 100vw;
+    height: 25vh;
+    overflow: hidden;
+  }
+
+  .header-and-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 63vw;
+    height: 20vh;
+  }
+  input {
+    font-family: 'Roboto Slab';
+    border: 1px dotted #333;
+    border-radius: 20px;
+    width: 100px;
+    height: 20px;
+    font-size: 0.3rem;
+    padding-left: 5px;
+    margin: 30 px;
+  }
+
+  ul.songs-and-artists-list li {
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    font-size: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-right: 40px;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+}
